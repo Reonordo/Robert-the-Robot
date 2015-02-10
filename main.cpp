@@ -4,6 +4,9 @@
 #include <cstdlib>
 #include <time.h>
 #include <stdio.h>
+#include <string>
+#include <Windows.h>
+#include <sstream>
 
 using namespace std;
 
@@ -11,26 +14,27 @@ int main()
 {
     string name;
     string feeling;
+    string response;
     cout << "Hi, I'm Robert the robot. \n";
     cout << "What's your name?\n";
     cin >> name;
     cout << "Hi " << name << "!" << " How are you today?" << endl;
     cin >> feeling;
-    if (feeling == "Good" || feeling == "good" || feeling == "Great" || feeling == "great" )
+    if (feeling == "Good" || feeling == "good" || feeling == "Great" || feeling == "great" || feeling == "I'm feeling great" || feeling == "Im feeling great" || feeling == "I'm feeling good" || feeling == "Im feeling good")
     {
-        cout << "I'm so glad that you're feeling " << feeling  << " today." << endl;
+        cout << "Awesome!" << endl;
         string response;
   int guess;
   int random;
   int chance = 9;
   srand (time(0));
-  random = rand()% 50 + 1;
-  cout << "Would you like to play a guessing game with me? \n";
+  random = rand()% 100 + 1;
+  cout << "Would you like to play a guessing game? \n";
   cin >> response;
   if (response == "Yes" || response == "yes" || response == "Yea" || response == "yea" || response == "Yup" || response == "yup" || response == "sure" || response == "Sure")
     {
       cout << "Awesome, let's get started! \n";
-      cout << "I'm going to think of a number from 1 to 50 and you have to guess it! \n";
+      cout << "I'm going to think of a number from 1 to 100 and you have to guess it! \n";
       cout << "I'm also going to give you 10 chances to guess the number.\n";
       cout << "When you're ready, just type in the number you want to guess. \n";
       cin >> guess;
@@ -63,12 +67,11 @@ int main()
           system("PAUSE");
           return 0;
         }
+    }
     else if (response == "Nah" || response == "nah" || response == "no" || response == "No" || response == "Nope" || response == "nope")
     {
-      cout << "Aw that sucks, maybe next time.\n";
-      system("PAUSE");
+      cout << "Aw that sucks. Maybe we can play another time.\n";
     }
-}
 
     else if (feeling == "Bad" || feeling == "bad" || feeling == "Not good" || feeling == "not good")
     {
@@ -80,5 +83,5 @@ int main()
         cout << "Sorry, I couldn't understand you.\n";
         system("PAUSE");
     }
-
 }
+
