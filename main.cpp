@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iostream>
 #include <stdlib.h>
 #include <cstdlib>
 #include <time.h>
@@ -15,12 +14,17 @@ int main()
     string name;
     string feeling;
     string response;
-    cout << "Hi, I'm Robert the robot. \n";
+    cout << "Hi, I'm Robert the robot.\n";
     cout << "What's your name?\n";
     cin >> name;
-    cout << "Hi " << name << "!" << " How are you today?" << endl;
+    cout << "Hi " << name << "." << " How are you feeling today?" << endl;
     cin >> feeling;
-    if (feeling == "Good" || feeling == "good" || feeling == "Great" || feeling == "great" || feeling == "I'm feeling great" || feeling == "Im feeling great" || feeling == "I'm feeling good" || feeling == "Im feeling good")
+    if (feeling == "Good" || feeling == "Good." || feeling == "good" || feeling == "good."
+    || feeling == "Great" || feeling == "great" || feeling == "great." || feeling == "Great."
+    || feeling == "I'm feeling good" || feeling == "Im feeling good" || feeling == "I'm feeling good." || feeling == "Im feeling good." || feeling == "im feeling good" || feeling == "im feeling good." || feeling == "i'm feeling good"
+    || feeling == "i'm feeling good." || feeling == "i'm feeling great."
+    || feeling == "i'm feeling great" || feeling == "I'm feeling great" || feeling == "I'm feeling great."
+    || feeling == "Im feeling great" || feeling == "Im feeling great." || feeling == "im feeling great.")
     {
         cout << "Awesome!" << endl;
         string response;
